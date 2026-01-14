@@ -350,6 +350,11 @@ Bundle-DocURL:
                                     <cnds>tccl:aem.cnd</cnds>
                                 </options>
                             </jackrabbit-nodetypes>
+                            <jackrabbit-packagetype>
+                                <options>
+                                    <immutableRootNodeNames>apps,libs,oak:index</immutableRootNodeNames>
+                                </options>
+                            </jackrabbit-packagetype>
                             <netcentric-aem-replication-metadata>
                                 <options>
                                     <agentNames>publish,preview</agentNames><!-- default value is publish only  -->
