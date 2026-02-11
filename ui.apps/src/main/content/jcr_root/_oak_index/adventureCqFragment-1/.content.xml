@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+        xmlns:jcr="http://www.jcp.org/jcr/1.0"
+        xmlns:oak="http://jackrabbit.apache.org/oak/ns/1.0"
+        xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+        jcr:primaryType="oak:QueryIndexDefinition"
+        type="lucene"
+        compatVersion="{Long}2"
+        async="[async]"
+        evaluatePathRestrictions="{Boolean}true"
+        includedPaths="[/content/dam/wknd-shared/en/adventures]"
+        queryPaths="[/content/dam/wknd-shared/en/adventures]">
+    <indexRules jcr:primaryType="nt:unstructured">
+        <nt:unstructured jcr:primaryType="nt:unstructured">
+            <properties jcr:primaryType="nt:unstructured">
+                <activity jcr:primaryType="nt:unstructured"
+                        name="activity"
+                        propertyIndex="{Boolean}true"/>
+                <itinerary
+                        jcr:primaryType="nt:unstructured"
+                        name="itinerary"
+                        propertyIndex="{Boolean}true"/>
+                <gearList
+                        jcr:primaryType="nt:unstructured"
+                        name="gearList"
+                        propertyIndex="{Boolean}true"/>
+            </properties>
+        </nt:unstructured>
+    </indexRules>
+</jcr:root>

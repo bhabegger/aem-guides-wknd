@@ -4,4 +4,6 @@
     <filter root="/apps/wknd/components"/>
     <filter root="/apps/wknd/i18n"/>
     <filter root="/apps/msm/wknd_blueprint" mode="merge"/>
+    <filter root="/oak:index/adventureCqFragment-1"/>
+    <filter root="/oak:index/contentExtractSearch-1"/>
 </workspaceFilter>

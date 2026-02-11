@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+        xmlns:jcr="http://www.jcp.org/jcr/1.0"
+        xmlns:oak="http://jackrabbit.apache.org/oak/ns/1.0"
+        xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+        jcr:primaryType="oak:QueryIndexDefinition"
+        type="elasticsearch"
+        compatVersion="{Long}2"
+        async="[async]"
+        evaluatePathRestrictions="{Boolean}true"
+        includedPaths="[/var/content-extract/search]"
+        queryPaths="[/var/content-extract/search]">
+
+    <indexRules jcr:primaryType="nt:unstructured">
+        <nt:unstructured
+                jcr:primaryType="nt:unstructured"
+                nodeName="jcr:content">
+            <properties jcr:primaryType="nt:unstructured">
+
+                <title
+                        jcr:primaryType="nt:unstructured"
+                        name="title"
+                        propertyIndex="{Boolean}true"
+                        analyzed="{Boolean}true"
+                        nodeScopeIndex="{Boolean}true"/>
+
+                <description
+                        jcr:primaryType="nt:unstructured"
+                        name="description"
+                        propertyIndex="{Boolean}true"
+                        analyzed="{Boolean}true"
+                        nodeScopeIndex="{Boolean}true"/>
+
+                <path
+                        jcr:primaryType="nt:unstructured"
+                        name="path"
+                        propertyIndex="{Boolean}true"
+                        analyzed="{Boolean}false"
+                        nodeScopeIndex="{Boolean}false"/>
+
+                <content
+                        jcr:primaryType="nt:unstructured"
+                        name="content"
+                        propertyIndex="{Boolean}true"
+                        analyzed="{Boolean}true"
+                        nodeScopeIndex="{Boolean}true"/>
+
+            </properties>
+        </nt:unstructured>
+    </indexRules>
+</jcr:root>
